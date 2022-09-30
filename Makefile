@@ -1,0 +1,3 @@
+
+test:
+	xelatex resume.tex
