@@ -1,36 +1,35 @@
-name: Build LaTeX document
-on: [push]
+# name: Build LaTeX document
+# on: [push]
 
-permissions:
-  contents: write
-  pull-requests: write
+# permissions:
+#   contents: write
+#   pull-requests: write
 
-env:
-  REPOSITORY_MAIN_BRANCH: "master"
-  MANIFEST_REPOSITORY: mosoriob/website 
-  MANIFEST_REPOSITORY_BRANCH: master
-  STATIC_REPOSITORY_PATH: static/pdf
+# env:
+#   REPOSITORY_MAIN_BRANCH: "master"
+#   MANIFEST_REPOSITORY: mosoriob/website
+#   MANIFEST_REPOSITORY_BRANCH: master
+#   STATIC_REPOSITORY_PATH: static/pdf
 
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v3
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: resume.tex
-          latexmk_use_xelatex: true
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
-        with:
-          name: PDF
-          path: resume.pdf
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add resume.pdf
-          git commit -m "Resume updated" resume.pdf
-          git push
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Set up Git repository
+#         uses: actions/checkout@v3
+#       - name: Compile LaTeX document
+#         uses: xu-cheng/latex-action@v2
+#         with:
+#           root_file: resume.tex
+#           latexmk_use_xelatex: true
+#       - name: Upload PDF file
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: PDF
+#           path: resume.pdf
+#       - run: |
+#           git config user.name github-actions
+#           git config user.email github-actions@github.com
+#           git add resume.pdf
+#           git commit -m "Resume updated" resume.pdf
+#           git push
