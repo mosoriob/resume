@@ -23,7 +23,7 @@
 %%% Override a directory location for fonts(default: 'fonts/')
 
 %%% Configure a directory location for sections
-\newcommand*{\sectiondir}{resume-es/}
+\newcommand*{\sectiondir}{resume-es-short/}
 
 %%% Override color
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
@@ -80,12 +80,9 @@
 %%% Import contents
 
 \import{\sectiondir}{experience.tex}
-\import{\sectiondir}{education.tex}
 \import{\sectiondir}{skills.tex}
-\import{\sectiondir}{projects.tex}
-%\import{\sectiondir}{presentation.tex}
-%\import{\sectiondir}{publications.tex}
-%\import{\sectiondir}{honors.tex}
+\newpage
+\import{\sectiondir}{education.tex}
 \import{\sectiondir}{references.tex}
 
 \end{document}
