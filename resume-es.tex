@@ -19,6 +19,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Themes: Awesome-CV
 \documentclass[11pt, a4paper]{awesome-cv}
+% set up spanish language
+\usepackage[spanish]{babel}
 %\addbibresource{ref.bib}
 %%% Override a directory location for fonts(default: 'fonts/')
 
@@ -70,7 +72,7 @@
 %%% Make a footer for CV with three arguments(<left>, <center>, <right>)
 \makecvfooter
   {\today}
-  {Maximiliano Osorio~~~·~~~Resume}
+  {Maximiliano Osorio~~~·~~~CV}
   {\thepage}
 
 \begin{document}
@@ -81,8 +83,9 @@
 
 \import{\sectiondir}{experience.tex}
 \import{\sectiondir}{education.tex}
+\newpage
 \import{\sectiondir}{skills.tex}
-\import{\sectiondir}{projects.tex}
+% \import{\sectiondir}{projects.tex}
 %\import{\sectiondir}{presentation.tex}
 %\import{\sectiondir}{publications.tex}
 %\import{\sectiondir}{honors.tex}
