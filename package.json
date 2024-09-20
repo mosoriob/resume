@@ -1,0 +1,15 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "I'm a software engineer who is passionate about making AI researchers possible, creating technologies to integrate information and models across disciplines.",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write **/*.tex"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-latex": "^2.0.1"
+  }
+}
